@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F8"
+    android:gravity="top"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"
+        android:gravity="center"
+        android:text="Do they have any of these life-threatening symptoms?"
+        android:textColor="#239cbc"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#F3F3F8"
+        aigestudio:cardElevation="16dp"
+        android:outlineSpotShadowColor="#F3F3F8"
+        aigestudio:cardCornerRadius="16dp"
+        android:layout_height="wrap_content">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:background="#F3F3F8"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:elevation="16dp" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvNo"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            aigestudio:cardElevation="16dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="#239cbc"
+            aigestudio:cardCornerRadius="20dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="24dp"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvYes"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            aigestudio:cardElevation="16dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="#239cbc"
+            aigestudio:cardCornerRadius="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textSize="24dp"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center
+">
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="50dp"
+            android:layout_margin="36dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_prev"
+            android:textColor="@android:color/background_dark" />
+
+        <LinearLayout
+            android:id="@+id/questionsLayoutDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>
